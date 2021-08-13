@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Multiplication Table</title>
+    </head>
+
+    <body>
+        <h1>Multiplication Table</h1>
+        <script>
+            let n = prompt('Digite o número de colunas desejado.')
+
+            function multiTable(n) { 
+            
+                let x = [];
+                
+                for(let i = 0; i < n; i++){
+                    x[i] = coluna(i);
+                }
+
+                function coluna(number){
+                let coluna = [];
+
+                for(let i = 0; i < n; i++){
+                     coluna[i] = number * i
+                }
+                
+                 return coluna;
+                }
+                
+                console.table(x)
+                return x;
+            }
+            multiTable(n);
+        </script>
+    </body>
+</html>
+
